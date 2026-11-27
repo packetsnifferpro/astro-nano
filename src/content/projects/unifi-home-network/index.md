@@ -11,7 +11,7 @@ I run a UniFi Cloud Gateway Max with one U6 Pro access point. I split the networ
 ## Network layout
 
 - **Main:** my laptop and phones
-- **Guest:** for visitors only, with limited download bandwidth
+- **Guest:** for visitors only
 - **IoT:** my TV and the smart bulbs in my house
 - **Games:** the game consoles
 - **Printers:** the printer, on its own network
@@ -21,6 +21,10 @@ I run a UniFi Cloud Gateway Max with one U6 Pro access point. I split the networ
 ## IP addressing
 
 Each VLAN got its own IP range when I created it. That keeps things tidy and makes the firewall rules much easier to write.
+
+## Bandwidth limits
+
+I created a bandwidth profile for the Guest and IoT networks. Both are capped at 100 Mbps download.
 
 ## Firewall design
 
