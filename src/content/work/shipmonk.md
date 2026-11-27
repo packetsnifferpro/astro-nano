@@ -10,5 +10,5 @@ dateEnd: "Present"
 - Track IT assets in Snipe-IT.
 - Manage devices with Miradore MDM, and with SOTI MDM after our migration to it.
 - Manage Apple devices and inventory with Mosyle.
-- Fix Zebra printers and HP color and black and white printers.
+- Work with Zebra printers, and fix HP color and black and white printers.
 - Monitor the network with UniFi consoles.
