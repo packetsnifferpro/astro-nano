@@ -1,21 +1,22 @@
 ---
 title: "My UniFi Home Network"
-description: "How I split my home network into six VLANs, set up one-way firewall rules and scheduled access, and fixed what broke along the way."
+description: "How I split my home network into seven VLANs, set up one-way firewall rules and scheduled access, and fixed what broke along the way."
 date: "Nov 27 2026"
 ---
 
 ## Overview
 
-I run a UniFi Cloud Gateway Max with one U6 Pro access point. I split the network into six separate networks so that guests, smart devices, game consoles, the printer and the camera can't wander over to my main devices.
+I run a UniFi Cloud Gateway Max with one U6 Pro access point. I split the network into seven separate networks so that guests, smart devices, game consoles, the printer and the camera can't wander over to my main devices.
 
 ## Network layout
 
-- **Default:** my laptop, phones and everyday devices
-- **Guest:** for visitors, and nothing else
+- **Main:** my laptop and phones
+- **Guest:** for visitors only, with limited download bandwidth
 - **IoT:** my TV and the smart bulbs in my house
-- **Gaming:** the game consoles
-- **Printer:** the printer, on its own network
+- **Games:** the game consoles
+- **Printers:** the printer, on its own network
 - **Security:** the camera, on its own so it stays isolated
+- **Default:** the built-in network UniFi creates out of the box
 
 ## IP addressing
 
@@ -23,7 +24,7 @@ Each VLAN got its own IP range when I created it. That keeps things tidy and mak
 
 ## Firewall design
 
-My main network can reach into the IoT, Gaming, Printer and Security networks, but those networks can only answer. They can't start a conversation with my main devices. It's a one-way, stateful rule.
+My Main network can reach into the IoT, Games, Printers and Security networks, but those networks can only answer. They can't start a conversation with my main devices. It's a one-way, stateful rule.
 
 ## Access scheduling
 
