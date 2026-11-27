@@ -1,10 +1,8 @@
 ---
 title: "My UniFi Home Network"
-description: "How I split my home network into four VLANs, wrote one-way firewall rules and scheduled access, and what broke along the way."
+description: "How I split my home network into four VLANs, set up one-way firewall rules and scheduled access, and fixed what broke along the way."
 date: "Nov 27 2026"
 ---
-
-<!-- TODO: Add your network diagram here (gateway, access point, the four networks). Upload the image to this same folder, then replace this line with: ![Network diagram](./network-diagram.png) -->
 
 ## Overview
 
@@ -21,13 +19,9 @@ I run a UniFi Cloud Gateway Max with one U6 Pro access point. I split the networ
 
 Each VLAN got its own IP range when I created it. That keeps things tidy and makes the firewall rules much easier to write.
 
-<!-- TODO: Add a screenshot of the UniFi Networks page or a short VLAN table (name and VLAN ID). Blur or leave out the real IP ranges and anything else sensitive. -->
-
 ## Firewall design
 
 My main network can reach into the IoT and Security networks, but those networks can only answer. They can't start a conversation with my main devices. It's a one-way, stateful rule.
-
-<!-- TODO: Optional screenshot of the firewall rules page, with sensitive details hidden. -->
 
 ## Access scheduling
 
