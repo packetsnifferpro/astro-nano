@@ -5,7 +5,7 @@ dateStart: "11/01/2024"
 dateEnd: "Present"
 ---
 
-- Set up laptops for new and existing employees.
+- Set up laptops.
 - Manage user accounts, including password resets, account activation and MFA.
 - Track IT assets in Snipe-IT.
 - Manage devices with Miradore MDM, and with SOTI MDM after our migration to it.
