@@ -1,18 +1,19 @@
 ---
 title: "My UniFi Home Network"
-description: "How I split my home network into four VLANs, set up one-way firewall rules and scheduled access, and fixed what broke along the way."
+description: "How I split my home network into five VLANs, set up one-way firewall rules and scheduled access, and fixed what broke along the way."
 date: "Nov 27 2026"
 ---
 
 ## Overview
 
-I run a UniFi Cloud Gateway Max with one U6 Pro access point. I split the network into four separate networks so that guests, gadgets and cameras can't wander over to my main devices.
+I run a UniFi Cloud Gateway Max with one U6 Pro access point. I split the network into five separate networks so that guests, gadgets, the printer and the camera can't wander over to my main devices.
 
 ## Network layout
 
 - **Default:** my laptop, phones and everyday devices
 - **Guest:** for visitors, and nothing else
-- **IoT:** the printer and game consoles
+- **IoT:** the game consoles
+- **Printer:** the printer, on its own network
 - **Security:** the camera, on its own so it stays isolated
 
 ## IP addressing
@@ -21,7 +22,7 @@ Each VLAN got its own IP range when I created it. That keeps things tidy and mak
 
 ## Firewall design
 
-My main network can reach into the IoT and Security networks, but those networks can only answer. They can't start a conversation with my main devices. It's a one-way, stateful rule.
+My main network can reach into the IoT, Printer and Security networks, but those networks can only answer. They can't start a conversation with my main devices. It's a one-way, stateful rule.
 
 ## Access scheduling
 
@@ -29,7 +30,7 @@ I also set up schedule-based firewall policies for the household devices. Each d
 
 ## What broke and how I fixed it
 
-1. **The printer went quiet.** Once I isolated the IoT network, my devices couldn't reach the printer because the firewall was blocking it. I fixed it by allowing the printer's port from my main network.
+1. **The printer went quiet.** Once I moved the printer onto its own network, my devices couldn't reach it because the firewall was blocking it. I fixed it by allowing the printer's port from my main network.
 2. **I got the downtime backwards.** I typed the downtime start time into the end-time field by mistake, so the schedule ran at the wrong hours. I caught it and swapped the times.
 
 ## What I learned
