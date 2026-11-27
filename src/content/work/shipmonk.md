@@ -6,7 +6,7 @@ dateEnd: "Present"
 ---
 
 - Set up laptops, resolve tickets and fix workstations.
-- Manage user accounts, including password resets, account activation and MFA.
+- Manage user accounts in Okta, including password resets, account activation and MFA.
 - Track IT assets in Snipe-IT.
 - Manage devices with Miradore MDM, and with SOTI MDM after our migration to it.
 - Manage Apple devices and inventory with Mosyle.
