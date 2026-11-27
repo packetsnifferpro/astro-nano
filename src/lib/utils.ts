@@ -36,5 +36,6 @@ export function dateRange(startDate: Date, endDate?: Date | string): string {
     }
   }
 
-  return `${startMonth}${startYear} - ${endMonth}${endYear}`;
+  const end = [endMonth, endYear].filter(Boolean).join(" ");
+  return `${startMonth} ${startYear} - ${end}`;
 }
