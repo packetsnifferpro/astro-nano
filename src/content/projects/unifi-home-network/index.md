@@ -10,13 +10,13 @@ I run a UniFi Cloud Gateway Max with one U6 Pro access point. I split the networ
 
 ## Network layout
 
+- **Default:** the built-in network UniFi creates out of the box
 - **Main:** my laptop and phones
-- **Guest:** for visitors only
 - **IoT:** my TV and the smart bulbs in my house
 - **Games:** the game consoles
 - **Printers:** the printer, on its own network
 - **Security:** the camera, on its own so it stays isolated
-- **Default:** the built-in network UniFi creates out of the box
+- **Guest:** for visitors only
 
 ## IP addressing
 
